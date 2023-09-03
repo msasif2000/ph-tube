@@ -16,6 +16,13 @@ const verify = (verified) => {
 displayContent = videos => {
     console.log(videos);
     document.getElementById('video-container').innerHTML = '';
+    if(videos.length === 0){
+        document.getElementById('video-section').innerHTML = `
+        <div class="items-center mt-24">
+        <img src="./images/oops.png" class=" mx-auto">
+        <h3 class="text-center text-xl font-bold">Oops!! Sorry, <br> There is no content here</h3>
+        </div>`;
+    }
     videos.forEach(video => {
         const videoCard = document.createElement('div');
         videoCard.classList = 'card bg-base-100';
@@ -41,6 +48,7 @@ displayContent = videos => {
 }
 
 const allHandle = ()=>{
+    
     loadContent('1000');
 }
 const musicHandle = ()=>{
