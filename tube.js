@@ -1,8 +1,12 @@
+var content = [];
+var contentId;
 const loadContent = async (id = '1000') => {
     const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`)
     const data = await res.json();
     //console.log(data.data);
     videos = data.data;
+    content = videos;
+    contentId = id;
     displayContent(videos, id);
 }
 const verify = (verified) => {
@@ -26,7 +30,7 @@ postTime = (time) => {
         }
         else if (hoursText) {
             return hoursText + " ago";
-        } 
+        }
         else if (minutesText) {
             return minutesText + " ago";
         }
@@ -127,10 +131,19 @@ const comedyHandle = () => {
 const drawingHandle = () => {
     loadContent('1005');
 }
-const sortByView = () => {
+const sortByViews = () => {
     console.log('clicked');
+    content.sort((a, b) => {
+        const viewsA = parseFloat(a.others.views);
+        const viewsB = parseFloat(b.others.views);
+        console.log(viewsA, viewsB);
+        return viewsB - viewsA;
+    });
+    displayContent(content, contentId);
+
 }
-    //displayContent(videos);
+
+//displayContent(videos);
 
 
 loadContent();
