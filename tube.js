@@ -89,7 +89,7 @@ displayContent = (videos, id) => {
             videoCard.innerHTML = `
                 <figure>
                 <div class="hero h-[250px]" style="background-image: url(${video.thumbnail});">
-                <div class="relative -right-28 top-28 text-slate-300 text-[14px] bg-slate-800 p-1/2 px-1  rounded">
+                <div class="relative -right-20 top-28 text-slate-300 text-[14px] bg-slate-800 p-1/2 px-1  rounded">
                     <p class="text-right">${postTime(video.others.posted_date)}</p>
                 </div>
                 </figure>
