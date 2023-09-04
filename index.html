@@ -35,7 +35,7 @@
                     </label>
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <button onclick="sortByTime()" class="btn btn-active hover:bg-slate-700">Sort by view</button>
+                        <button onclick="sortByView()" class="btn btn-active hover:bg-slate-700">Sort by views</button>
                     </ul>
                 </div>
                 <div>
@@ -48,23 +48,17 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn bg-[#FF1F3D] text-white hover:bg-slate-700">Blog</a>
+                <a href="./blog.html"  class="btn bg-[#FF1F3D] text-white hover:bg-slate-700">Blog</a>
             </div>
         </div>
     </header>
     <main class="md:container py-4 mx-auto">
         <div class="bg-slate-400 w-full h-1"></div>
         <section class="space-x-4 flex justify-center mx-auto py-4">
-            <button onclick="allHandle()" id="all"
-                class="px-4 bg-slate-200 rounded-md py-1 text-xl hover:text-white hover:bg-slate-600">All</button onclick="Handle()">
-            <button onclick="musicHandle()" id="music"
-                class="px-4 bg-slate-200 rounded-md py-1 text-xl hover:text-white hover:bg-slate-600">Music</button
-                onclick="Handle()">
-            <button onclick="comedyHandle()" id="comedy"
-                class="px-4 bg-slate-200 rounded-md py-1 text-xl hover:text-white hover:bg-slate-600">Comedy</button
-                onclick="Handle()">
-            <button onclick="drawingHandle()" id="drawing"
-                class="px-4 bg-slate-200 rounded-md py-1 text-xl hover:text-white hover:bg-slate-600">Drawing</button>
+            <button onclick="allHandle()" id="all" class="px-4 bg-slate-200 rounded-md py-1 text-xl hover:text-white hover:bg-slate-600">All</button>
+            <button onclick="musicHandle()" id="music" class="px-4 bg-slate-200 rounded-md py-1 text-xl hover:text-white hover:bg-slate-600">Music</button>
+            <button onclick="comedyHandle()" id="comedy" class="px-4 bg-slate-200 rounded-md py-1 text-xl hover:text-white hover:bg-slate-600">Comedy</button>
+            <button onclick="drawingHandle()" id="drawing" class="px-4 bg-slate-200 rounded-md py-1 text-xl hover:text-white hover:bg-slate-600">Drawing</button>
         </section>
         <section id="video-section">
             <div id="video-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
